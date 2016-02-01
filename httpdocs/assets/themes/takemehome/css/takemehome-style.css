@@ -1,5 +1,7 @@
+@import url('//fonts.googleapis.com/css?family=Raleway:200,400,700');
+
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif /*{body-font-family}*/;
+	font-family: "Raleway", Helvetica, Arial, sans-serif /*{body-font-family}*/;
 	font-size: 14px /*{body-font-size}*/;
 	color: #333333 /*{body-font-colour}*/;
 	background-image:none /*{body-background-image}*/;
@@ -7,11 +9,11 @@ body {
 }
 
 a {
-	color: #428bca /*{link-text-colour}*/;
+	color: #000 /*{link-text-colour}*/;
 }
 a:hover,
 a:focus {
-	color: #2a6496 /*{link-text-hover-colour}*/;
+	color: #B3000E /*{link-text-hover-colour}*/;
 }
 
 h1,

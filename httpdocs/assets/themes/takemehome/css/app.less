@@ -6,9 +6,6 @@
 	max-width: 100%;
 	margin-top: 10px;
 }
-.header-search, #header-cart {
-	margin-top: 20px;
-}
 #header-cart {
 	z-index: 10002;
 }
@@ -225,7 +222,8 @@ a.wishlist_toggle:hover {
 }
 
 .caption .price {
-	font-size:16px;
+	font-size:18px;
+	font-weight: bold;
 	height:21px;
 }
 
@@ -792,7 +790,7 @@ ul.imagelist li .imagethumb { text-align:center; height: 100px; }
 }
 
 .thumbnail .caption h3 {
-	font-size: 15px;
+	font-size: 17px;
 	line-height: 1.4;
 	height: 4em;
 	overflow: hidden;
@@ -1338,3 +1336,89 @@ input[readonly] {background:#EFEFEF; color:666;}
 
 #_cpy_goback_pl {display:none;}
 .btn .fa {pointer-events:none;}
+
+// Custom Styles
+
+@gray-darker:            lighten(#000, 13.5%); // #222
+@gray-dark:              lighten(#000, 20%);   // #333
+@gray:                   lighten(#000, 33.5%); // #555
+@gray-light:             lighten(#000, 46.7%); // #777
+@gray-lighter:           lighten(#000, 93.5%); // #eee
+
+@brand-primary:         #222;
+@brand-success:         #222;
+@brand-info:            #222;
+@brand-warning:         #222;
+@brand-danger:          #222;
+
+@btn-default-color: #333;
+@btn-default-bg: #fff;
+@btn-default-border: #ccc;
+
+@btn-primary-color:              #333;
+@btn-primary-bg:                 #fff;
+@btn-primary-border:             #ccc;
+
+@btn-success-color:              #fff;
+@btn-success-bg:                 #222;
+@btn-success-border:             darken(@btn-default-bg, 5%);
+
+@btn-info-color:				#333;
+@btn-info-bg:					#fff;
+@btn-info-border:				#ccc;
+
+@btn-warning-color:              #333;
+@btn-warning-bg:                 #fff;
+@btn-warning-border:             #ccc;
+
+@btn-danger-color:               #333;
+@btn-danger-bg:                  #fff;
+@btn-danger-border:              #ccc;
+
+@import url('//fonts.googleapis.com/css?family=Raleway:200,400,700');
+
+body {
+	font-family: "Raleway", Helvetica, Arial, sans-serif /*{body-font-family}*/;
+}
+
+// Custom Top Bar
+.topbar--Wrap {
+	height: 44px;
+	background: #eeeeee;
+
+	.topbar--wrap--form {
+		padding: 5px 0;
+		height: 30px;
+		width: 100%;
+		float: left;
+	}
+
+	.topbar--wrap--nav {
+		height: 45px;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+
+		.dropdown-menu {
+			margin-top: -1px;
+		}
+
+		> li {
+			float: left;
+			margin-left: 15px;
+		}
+
+		> li > a {
+			height: 44px;
+			line-height: 44px;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+#header-cart > a {
+	height: 44px;
+    line-height: 44px;
+}
