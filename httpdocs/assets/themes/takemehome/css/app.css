@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url('//fonts.googleapis.com/css?family=Raleway:200,400,700');
+@import url(//fonts.googleapis.com/css?family=Raleway:200,400,600,700);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6754,6 +6754,13 @@ button.close {
   position: absolute;
   display: none !important;
 }
+.topbar--wrap--form .btn-default {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.topbar--wrap--form .btn-default:hover {
+  border: 1px solid #ccc;
+}
 #neto-dropdown {
   width: 250px;
 }
@@ -7032,7 +7039,7 @@ a.wishlist_toggle:hover {
 }
 .productpricetext {
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 400;
 }
 .productrrp {
   text-decoration: line-through;
@@ -8200,15 +8207,61 @@ input[readonly] {
 body {
   font-family: "Raleway", Helvetica, Arial, sans-serif /*{body-font-family}*/;
 }
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+#main-content > .row:first-child > .col-xs-12 {
+  padding-top: 0;
+}
+.panel-default {
+  border-color: #fff;
+}
+.panel-default > .panel-heading {
+  padding: 10px 0;
+  background-color: #fff;
+}
+.list-group-item {
+  padding: 10px 0;
+  border: none;
+}
+a.list-group-item:hover,
+button.list-group-item:hover,
+a.list-group-item:focus,
+button.list-group-item:focus {
+  color: #B3000E;
+  background-color: #fff;
+}
+.breadcrumb {
+  padding: 8px 15px 8px 0;
+}
+.caption .price {
+  font-weight: 400;
+}
+.page-header {
+  border: none;
+}
 .topbar--Wrap {
   height: 44px;
-  background: #eeeeee;
+}
+.topbar--Wrap .topbar--Wrap--container {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.topbar--Wrap .row {
+  display: flex;
 }
 .topbar--Wrap .topbar--wrap--form {
   padding: 5px 0;
   height: 30px;
   width: 100%;
   float: left;
+}
+.topbar--Wrap .topbar--wrap--form .btn {
+  border-left: none;
 }
 .topbar--Wrap .topbar--wrap--nav {
   height: 45px;
@@ -8221,7 +8274,7 @@ body {
 }
 .topbar--Wrap .topbar--wrap--nav > li {
   float: left;
-  margin-left: 15px;
+  margin-left: 17px;
 }
 .topbar--Wrap .topbar--wrap--nav > li > a {
   height: 44px;
@@ -8230,7 +8283,62 @@ body {
 .topbar--Wrap .topbar--wrap--nav > li > a:hover {
   text-decoration: none;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .topbar--Wrap .topbar--wrap--nav > li {
+    margin-left: 0;
+  }
+  .topbar--Wrap .topbar--wrap--nav > li > a {
+    padding: 15px 6px;
+    font-size: 11px;
+  }
+}
+.checkout-link {
+  color: #B3000E;
+}
 #header-cart > a {
   height: 44px;
+  margin-right: 15px;
   line-height: 44px;
+}
+#header-cart > a:hover {
+  text-decoration: none;
+}
+.logo {
+  margin: 25px 0;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-nav > li > a {
+    padding: 15px 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav > li > a {
+    padding: 15px 8px;
+    font-size: 12px;
+  }
+}
+.wrapper-footer {
+  padding: 40px 0px;
+}
+@media (max-width: 767px) {
+  .wrapper-footer h4 {
+    margin-top: 20px;
+  }
+}
+.sort_container {
+  margin-bottom: 40px;
+}
+#left-sidebar .list-group h4,
+#left-sidebar .list-group .h4 {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #585858;
+}
+.wrapper-thumbnail {
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .wrapper-thumbnail {
+    float: left;
+  }
 }

@@ -28,81 +28,83 @@
 </head>
 <body id="n_[@config:current_page_type@]" class="n_[@CONFIG:TEMPLATELANG@]">
 <div class="topbar--Wrap hidden-xs">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-3">
-				<form class="topbar--wrap--form" name="productsearch" method="get" action="/">
-					<input type="hidden" name="rf" value="kw"/>
-					<div class="input-group">
-						<input class="form-control ajax_search" value="[%nohtml%][%filter ID:'keywords'%][%/filter%][%/nohtml%]" id="name_search" autocomplete="off" name="kw" type="text"/>
-						<span class="input-group-btn">
-							<button type="submit" value="Search" class="btn btn-default"><i class="fa fa-search"></i></button>
-						</span>
-					</div>
-				</form>
-			</div>
-			<div class="col-sm-6">
-				<ul class="topbar--wrap--nav">
-					[%cache type:'menu' id:'header-content-menu'%]
-						[%menu id:'web_header'%]
-							[%param *level_1%]
-								<li class="[%if [@next_level@]%]dropdown dropdown-hover[%/if%]"> <a href="[@url@]" [%if [@next_level@]%]class="dropdown-toggle"[%/if%]>[@name@]</a>
-									[%if [@next_level@]%]
-										<ul class="dropdown-menu">
-											[@next_level@]
-										</ul>
-									[%/if%]
-								</li>
+	<div class="topbar--Wrap--container">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<form class="topbar--wrap--form" name="productsearch" method="get" action="/">
+						<input type="hidden" name="rf" value="kw"/>
+						<div class="input-group">
+							<input class="form-control ajax_search" value="[%nohtml%][%filter ID:'keywords'%][%/filter%][%/nohtml%]" id="name_search" autocomplete="off" name="kw" type="text"/>
+							<span class="input-group-btn">
+								<button type="submit" value="Search" class="btn btn-default"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-6">
+					<ul class="topbar--wrap--nav">
+						[%cache type:'menu' id:'header-content-menu'%]
+							[%menu id:'web_header'%]
+								[%param *level_1%]
+									<li class="[%if [@next_level@]%]dropdown dropdown-hover[%/if%]"> <a href="[@url@]" [%if [@next_level@]%]class="dropdown-toggle"[%/if%]>[@name@]</a>
+										[%if [@next_level@]%]
+											<ul class="dropdown-menu">
+												[@next_level@]
+											</ul>
+										[%/if%]
+									</li>
+									[%/param%]
+								[%param *level_2%]
+									<li class="[%if [@next_level@]%]dropdown dropdown-hover[%/if%]"> <a href="[@url@]" class="nuhover dropdown-toggle">[@name@]</a>
+										[%if [@next_level@]%]
+											<ul class="dropdown-menu dropdown-menu-horizontal">
+												[@next_level@]
+											</ul>
+										[%/if%]
+									</li>
+									[%/param%]
+								[%param *level_3%]
+									<li class="[%if [@next_level@]%]dropdown dropdown-hover[%/if%]"> <a href="[@url@]">[@name@]</a>
+										[%if [@next_level@]%]
+											<ul class="dropdown-menu dropdown-menu-horizontal">
+												[@next_level@]
+											</ul>
+										[%/if%]
+									</li>
 								[%/param%]
-							[%param *level_2%]
-								<li class="[%if [@next_level@]%]dropdown dropdown-hover[%/if%]"> <a href="[@url@]" class="nuhover dropdown-toggle">[@name@]</a>
-									[%if [@next_level@]%]
-										<ul class="dropdown-menu dropdown-menu-horizontal">
-											[@next_level@]
-										</ul>
-									[%/if%]
-								</li>
-								[%/param%]
-							[%param *level_3%]
-								<li class="[%if [@next_level@]%]dropdown dropdown-hover[%/if%]"> <a href="[@url@]">[@name@]</a>
-									[%if [@next_level@]%]
-										<ul class="dropdown-menu dropdown-menu-horizontal">
-											[@next_level@]
-										</ul>
-									[%/if%]
-								</li>
-							[%/param%]
-						[%/menu%]
-					[%/ cache%]
-				</ul>
-			</div>
-			<div class="col-sm-3">
-				<div id="header-cart" class="pull-right">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="cartcontentsheader">
-						<i class="fa fa-shopping-cart"></i> <span class="visible-lg visible-inline-lg">Cart</span>(<span rel="a2c_item_count">[%format type:'number' dp:'0'%][%CART id:'total_items'%][%/CART%][%/format%]</span>)
-						<span class="caret"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li class="box" id="neto-dropdown">
-							<div class="body padding" id="cartcontents"></div>
-							<div class="footer"></div>
-						</li>
+							[%/menu%]
+						[%/ cache%]
 					</ul>
-					<a href="[%url page:'checkout' type:'payment'/%]">Checkout</a>
+				</div>
+				<div class="col-sm-3">
+					<div id="header-cart" class="pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" id="cartcontentsheader">
+							<i class="fa fa-shopping-cart"></i> <span class="visible-lg visible-inline-lg">Cart</span>(<span rel="a2c_item_count">[%format type:'number' dp:'0'%][%CART id:'total_items'%][%/CART%][%/format%]</span>)
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="box" id="neto-dropdown">
+								<div class="body padding" id="cartcontents"></div>
+								<div class="footer"></div>
+							</li>
+						</ul>
+						<a href="[%url page:'checkout' type:'payment'/%]" class="checkout-link">Checkout</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <div class="container wrapper-header">
-	<div class="row row-padded">
+	<div class="row">
 		<div class="col-xs-12 col-sm-4 wrapper-logo">
 			<a href="[@config:homeurl@]" title="[@config:company_name@]">
 				<img class="logo" src="[@config:imageurl@]/website_logo.png" alt="[@config:company_name@]"/>
 			</a>
 		</div>
-		<div class="hidden-xs col-sm-8 text-right">
-			<ul class="nav navbar-nav">
+		<div class="hidden-xs col-sm-8">
+			<ul class="nav navbar-nav pull-right">
 				[%cache type:'cmenu' id:'header-cat-menu'%]
 					[%categorymenu id:'web_header'%]
 						[%param *level_1%]
