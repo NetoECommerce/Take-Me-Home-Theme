@@ -69,6 +69,11 @@ a:hover, a:active {
 .nav > li > a:hover, .nav > li > a:focus {
 	background:rgba(0, 0, 0, 0);
 }
+
+#left-sidebar .panel {
+	box-shadow: none;
+}
+
 .btn-primary {
 	color: #FFFFFF;
 	background-color: #000 /*{buttons|primary-colour}*/;
