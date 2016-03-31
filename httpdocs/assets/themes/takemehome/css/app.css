@@ -8213,6 +8213,9 @@ h3,
 h4 {
   font-weight: 400;
 }
+a:hover {
+  text-decoration: none;
+}
 #main-content > .row:first-child > .col-xs-12 {
   padding-top: 0;
 }
@@ -8236,6 +8239,7 @@ button.list-group-item:focus {
 }
 .breadcrumb {
   padding: 8px 15px 8px 0;
+  background: rgba(0, 0, 0, 0);
 }
 .caption .price {
   font-weight: 400;
@@ -8316,6 +8320,10 @@ button.list-group-item:focus {
     padding: 15px 8px;
     font-size: 12px;
   }
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: #FFF;
 }
 .wrapper-footer {
   padding: 40px 0px;

@@ -650,8 +650,6 @@ ul.imagelist li .imagethumb { text-align:center; height: 100px; }
 	height: 110px;
 }
 
-
-
 .nav-header {
 	padding: 10px 15px;
 	font-weight: bold;
@@ -882,7 +880,6 @@ ul.imagelist li .imagethumb { text-align:center; height: 100px; }
 	height:10px;
 	background-position:0px -186px;
 }
-
 
 .savings-container {
 	position: absolute;
@@ -1396,6 +1393,10 @@ h1, h2, h3, h4 {
 	font-weight: 400;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
 #main-content > .row:first-child > .col-xs-12 {
 	padding-top: 0;
 }
@@ -1424,6 +1425,7 @@ button.list-group-item:focus {
 
 .breadcrumb {
 	padding: 8px 15px 8px 0;
+	background: rgba(0,0,0,0);
 }
 
 .caption .price {
@@ -1523,6 +1525,11 @@ button.list-group-item:focus {
 		padding: 15px 8px;
 		font-size: 12px;
 	}
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background-color: #FFF;
 }
 
 // Footer
