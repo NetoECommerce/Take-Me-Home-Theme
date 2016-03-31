@@ -1245,7 +1245,7 @@ blockquote h1,h2,h3,h4 {
 	.dropdown-hover:hover>.dropdown-menu {
 		display: block
 	}
-	.wrapper-header > .row:first-child {
+	.wrapper-header > .container > .row:first-child {
 		display: flex;
 		align-items: center;
 	}
@@ -1345,41 +1345,9 @@ input[readonly] {background:#EFEFEF; color:666;}
 
 // Custom Styles
 
-@gray-darker:            lighten(#000, 13.5%); // #222
-@gray-dark:              lighten(#000, 20%);   // #333
-@gray:                   lighten(#000, 33.5%); // #555
-@gray-light:             lighten(#000, 46.7%); // #777
-@gray-lighter:           lighten(#000, 93.5%); // #eee
-
-@brand-primary:         #222;
-@brand-success:         #222;
-@brand-info:            #222;
-@brand-warning:         #222;
-@brand-danger:          #222;
-
-@btn-default-color: #333;
-@btn-default-bg: #fff;
-@btn-default-border: #ccc;
-
-@btn-primary-color:              #333;
-@btn-primary-bg:                 #fff;
-@btn-primary-border:             #ccc;
-
-@btn-success-color:              #fff;
-@btn-success-bg:                 #222;
-@btn-success-border:             darken(@btn-default-bg, 5%);
-
-@btn-info-color:				#333;
-@btn-info-bg:					#fff;
-@btn-info-border:				#ccc;
-
-@btn-warning-color:              #333;
-@btn-warning-bg:                 #fff;
-@btn-warning-border:             #ccc;
-
-@btn-danger-color:               #333;
-@btn-danger-bg:                  #fff;
-@btn-danger-border:              #ccc;
+@btn-default-color: #333333;
+@btn-default-bg: #EFEFEF;
+@btn-default-border: #EFEFEF;
 
 // Generic
 
@@ -1410,6 +1378,10 @@ a:hover {
 	}
 }
 
+.panel-body {
+	padding: 15px 0 15px;
+}
+
 .list-group-item {
 	padding: 10px 0;
 	border: none;
@@ -1434,6 +1406,10 @@ button.list-group-item:focus {
 
 .page-header {
 	border: none;
+}
+
+.panel-body {
+	padding: 15px 0 15px;
 }
 
 // Header
@@ -1496,10 +1472,6 @@ button.list-group-item:focus {
 	}
 }
 
-.checkout-link {
-	color: #B3000E;
-}
-
 #header-cart > a {
 	height: 44px;
 	margin-right: 15px;
@@ -1552,6 +1524,7 @@ button.list-group-item:focus {
 	margin-top: 6px;
     font-size: 14px;
     color: #585858;
+	text-decoration: underline;
 }
 
 // Product thumbnails
