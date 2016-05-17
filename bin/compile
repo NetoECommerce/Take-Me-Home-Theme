@@ -23,7 +23,7 @@ echo "Compiling '${MAINTHEME}' themes"
 
 echo "Fetching latest Skeletal"
 
-git clone --depth 1 -b skeletal3 https://github.com/NetoECommerce/Skeletal.git ${DIST}/.latestSkeletal
+git clone --depth 1 https://github.com/NetoECommerce/Skeletal.git ${DIST}/.latestSkeletal
 
 for theme in $THEMES; do
 	echo "Building '${theme}' theme"
@@ -33,9 +33,9 @@ for theme in $THEMES; do
 	mkdir "${DIST}/${theme}/_assets"
 
 	# Copy latest from Skeletal
-	cp -r "${DIST}/.latestSkeletal/templates/." "${DIST}/${theme}/"
-	cp -r "${DIST}/.latestSkeletal/css" "${DIST}/${theme}/_assets"
-	cp -r "${DIST}/.latestSkeletal/js" "${DIST}/${theme}/_assets"
+	cp -r "${DIST}/.latestSkeletal/src/templates/." "${DIST}/${theme}/"
+	cp -r "${DIST}/.latestSkeletal/src/css" "${DIST}/${theme}/_assets"
+	cp -r "${DIST}/.latestSkeletal/src/js" "${DIST}/${theme}/_assets"
 
 	# Copy Templates
 	cp -r "./src/templates/." "${DIST}/${theme}/"
