@@ -8354,3 +8354,6 @@ button.list-group-item:focus {
     float: left;
   }
 }
+.nactivity{
+	display: none;
+}
