@@ -1,6 +1,6 @@
 	</div>
 </div>
-<div class="wrapper-footer">
+<footer class="wrapper-footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-8">
@@ -37,35 +37,35 @@
 						</div>
 					</form>
 				[%/if%]
-				<ul class="list-inline list-social" itemscope itemtype="http://schema.org/Organization">
+				<ul class="list-inline list-social" itemscope itemtype="http://schema.org/Organization" role="contentinfo" aria-label="Social Media">
 					<meta itemprop="url" content="[@config:home_url@]"/>
 					<meta itemprop="logo" content="[@config:home_url@][@config:imageurl@]/website_logo.png"/>
 					<meta itemprop="name" content="[@config:company_name@]"/>
 					[%if [@config:facebook_account_id@]%]
-					<li><a itemprop="sameAs" href="[@config:facebook_account_id@]" target="_blank" title="[@config:company_name@] on Facebook"><i class="fa fa-facebook-square text-facebook"></i><span class="sr-only">Facebook</span></a></li>
+					<li><a itemprop="sameAs" href="[@config:facebook_account_id@]" target="_blank" title="[@config:company_name@] on Facebook" role="link"><i class="fa fa-facebook-square text-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li>
 					[%/if%]
 					[%if [@config:twitter_account_id@]%]
-					<li><a itemprop="sameAs" href="[@config:twitter_account_id@]" target="_blank" title="[@config:company_name@] on Twitter"><i class="fa fa-twitter-square text-twitter"></i><span class="sr-only">Twitter</span></a></li>
+					<li><a itemprop="sameAs" href="[@config:twitter_account_id@]" target="_blank" title="[@config:company_name@] on Twitter" role="link"><i class="fa fa-twitter-square text-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
 					[%/if%]
 					[%if [@config:googleplus_account_id@]%]
-					<li><a itemprop="sameAs" href="[@config:googleplus_account_id@]" target="_blank" title="[@config:company_name@] on Google Plus"><i class="fa fa-google-plus-square text-google-plus"></i><span class="sr-only">Google Plus</span></a></li>
+					<li><a itemprop="sameAs" href="[@config:googleplus_account_id@]" target="_blank" title="[@config:company_name@] on Google Plus" role="link"><i class="fa fa-google-plus-square text-google-plus" aria-hidden="true"></i><span class="sr-only">Google Plus</span></a></li>
 					[%/if%]
 					[%if [@config:youtube_account_id@]%]
-					<li><a itemprop="sameAs" href="[@config:youtube_account_id@]" target="_blank" title="[@config:company_name@] on Youtube"><i class="fa fa-youtube-square text-youtube"></i><span class="sr-only">Youtube</span></a></li>
+					<li><a itemprop="sameAs" href="[@config:youtube_account_id@]" target="_blank" title="[@config:company_name@] on Youtube" role="link"><i class="fa fa-youtube-square text-youtube" aria-hidden="true"></i><span class="sr-only">Youtube</span></a></li>
 					[%/if%]
 					[%if [@config:instagram_account_id@]%]
-					<li><a itemprop="sameAs" href="[@config:instagram_account_id@]" target="_blank" title="[@config:company_name@] on Instagram"><i class="fa fa-instagram text-instagram"></i><span class="sr-only">Instagram</span></a></li>
+					<li><a itemprop="sameAs" href="[@config:instagram_account_id@]" target="_blank" title="[@config:company_name@] on Instagram" role="link"><i class="fa fa-instagram text-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a></li>
 					[%/if%]
 					[%if [@config:pinterest_account_id@]%]
-					<li><a itemprop="sameAs" href="[@config:pinterest_account_id@]" target="_blank" title="[@config:company_name@] on Pinterest"><i class="fa fa-pinterest-square text-pinterest"></i><span class="sr-only">Pinterest</span></a></li>
+					<li><a itemprop="sameAs" href="[@config:pinterest_account_id@]" target="_blank" title="[@config:company_name@] on Pinterest" role="link"><i class="fa fa-pinterest-square text-pinterest" aria-hidden="true"></i><span class="sr-only">Pinterest</span></a></li>
 					[%/if%]
 					[%if [@config:tumblr_account_id@]%]
-					<li><a itemprop="sameAs" href="[@config:tumblr_account_id@]" target="_blank" title="[@config:company_name@] on Tumblr"><i class="fa fa-tumblr-square text-tumblr"></i><span class="sr-only">Tumblr</span></a></li>
+					<li><a itemprop="sameAs" href="[@config:tumblr_account_id@]" target="_blank" title="[@config:company_name@] on Tumblr" role="link"><i class="fa fa-tumblr-square text-tumblr" aria-hidden="true"></i><span class="sr-only">Tumblr</span></a></li>
 					[%/if%]
 					[%if [@config:linkedin_account_id@]%]
-					<li><a itemprop="sameAs" href="[@config:linkedin_account_id@]" target="_blank" title="[@config:company_name@] on Linkedin"><i class="fa fa-linkedin-square text-linkedin"></i><span class="sr-only">Linkedin</span></a></li>
+					<li><a itemprop="sameAs" href="[@config:linkedin_account_id@]" target="_blank" title="[@config:company_name@] on Linkedin" role="link"><i class="fa fa-linkedin-square text-linkedin" aria-hidden="true"></i><span class="sr-only">Linkedin</span></a></li>
 					[%/if%]
-					<li><a href="[%url type:'page' id:'contact_us'/%]" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					<li><a href="[%url type:'page' id:'contact_us'/%]" target="_blank" title="Email us" aria-label="Email us"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -78,93 +78,123 @@
 			<div class="col-xs-9 hidden-xs">
 				[%payment_methods ignore_balance:'1'%]
 					[%param header%]
-						<ul class="list-inline">
+						<ul class="list-inline" role="contentinfo" aria-label="Accepted Payment methods">
 					[%/param%]
 					[%param *body%]
 						[%if [@name@] like 'American Express'%]
 							<li>
 								<div class="payment-icon-container">
-									<div class="payment-icon payment-icon-americanexpress"></div>
-									<span class="sr-only">[@name@]</span>
+									<div class="payment-icon payment-icon-americanexpress">
+										<span class="sr-only">[@name@]</span>
+									</div>
 								</div>
 							</li>
 						[%/if%]
 						[%if [@name@] like 'Visa'%]
 							<li>
 								<div class="payment-icon-container">
-									<div class="payment-icon payment-icon-visa"></div>
-									<span class="sr-only">[@name@]</span>
+									<div class="payment-icon payment-icon-visa">
+										<span class="sr-only">[@name@]</span>
+									</div>
 								</div>
 							</li>
 						[%/if%]
 						[%if [@name@] like 'MasterCard' OR [@name@] like 'Master Card'%]
 							<li>
 								<div class="payment-icon-container">
-									<div class="payment-icon payment-icon-mastercard"></div>
-									<span class="sr-only">[@name@]</span>
+									<div class="payment-icon payment-icon-mastercard">
+										<span class="sr-only">[@name@]</span>
+									</div>
 								</div>
 							</li>
 						[%/if%]
 						[%if [@name@] like 'Discover'%]
 							<li>
 								<div class="payment-icon-container">
-									<div class="payment-icon payment-icon-discover"></div>
-									<span class="sr-only">[@name@]</span>
+									<div class="payment-icon payment-icon-discover">
+										<span class="sr-only">[@name@]</span>
+									</div>
 								</div>
 							</li>
 						[%/if%]
 						[%if [@name@] like 'Diners'%]
 							<li>
 								<div class="payment-icon-container">
-									<div class="payment-icon payment-icon-diners"></div>
-									<span class="sr-only">[@name@]</span>
+									<div class="payment-icon payment-icon-diners">
+										<span class="sr-only">[@name@]</span>
+									</div>
 								</div>
 							</li>
 						[%/if%]
 						[%if [@name@] like 'Cheque'%]
 							<li>
 								<div class="payment-icon-container">
-									<div class="payment-icon payment-icon-cheque"></div>
-									<span class="sr-only">[@name@]</span>
+									<div class="payment-icon payment-icon-cheque">
+										<span class="sr-only">[@name@]</span>
+									</div>
 								</div>
 							</li>
 						[%/if%]
 						[%if [@name@] like 'Money Order'%]
 							<li>
 								<div class="payment-icon-container">
-									<div class="payment-icon payment-icon-moneyorder"></div>
-									<span class="sr-only">[@name@]</span>
+									<div class="payment-icon payment-icon-moneyorder">
+										<span class="sr-only">[@name@]</span>
+									</div>
 								</div>
 							</li>
 						[%/if%]
-						[%if [@name@] like 'Direct Deposit' OR [@name@] like 'Bank Deposit'%]
+						[%if [@name@] like 'Direct Deposit' || [@name@] like 'Bank Deposit'%]
 							<li>
 								<div class="payment-icon-container">
-									<div class="payment-icon payment-icon-directdeposit"></div>
-									<span class="sr-only">[@name@]</span>
+									<div class="payment-icon payment-icon-directdeposit">
+										<span class="sr-only">[@name@]</span>
+									</div>
 								</div>
 							</li>
 						[%/if%]
 						[%if [@name@] like 'bpay'%]
 							<li>
 								<div class="payment-icon-container">
-									<div class="payment-icon payment-icon-bpay"></div>
-									<span class="sr-only">[@name@]</span>
+									<div class="payment-icon payment-icon-bpay">
+										<span class="sr-only">[@name@]</span>
+									</div>
 								</div>
 							</li>
 						[%/if%]
 						[%if [@name@] like 'paypal'%]
 							<li>
 								<div class="payment-icon-container">
-									<div class="payment-icon payment-icon-paypal"></div>
-									<span class="sr-only">[@name@]</span>
+									<div class="payment-icon payment-icon-paypal">
+										<span class="sr-only">[@name@]</span>
+									</div>
 								</div>
 							</li>
 						[%/if%]
 						[%if [@name@] like 'afterpay'%]
 							<li>
 								<div class="payment-icon-container">
-									<div class="payment-icon payment-icon-afterpay"></div>
+									<div class="payment-icon payment-icon-afterpay">
+										<span class="sr-only">[@name@]</span>
+									</div>
+								</div>
+							</li>
+						[%/if%]
+						[%if [@name@] like 'Q Card' OR [@name@] like 'QCard'%]
+							<li>
+								<div class="payment-icon-container">
+									<div class="payment-icon payment-icon-q-card">
+										<span class="sr-only">[@name@]</span>
+									</div>
+								</div>
+							</li>
+						[%/if%]
+						[%if [@name@] like 'Paymark Online Eftpos' OR [@name@] like 'Paymark'%]
+							<li>
+								<div class="payment-icon-container">
+									<div class="payment-icon payment-icon-paymark">
+										<span class="sr-only">[@name@]</span>
+									</div>
 								</div>
 							</li>
 						[%/if%]
@@ -175,16 +205,16 @@
 				[%/payment_methods%]
 			</div>
 			<div class="col-sm-3">
-				<address>
+				<address role="contentinfo" aria-label="Company Details">
 					<strong>Copyright &copy; [%format type:'date' format:'#Y'%]today[%/format%] [@config:company_name@]</strong><br>
 					[%if [@config:company_abn@]%]<strong>ABN:</strong> [@config:company_abn@]<br>[%/ if%]
 					[%if [@config:company_poaddr@]%]<strong>Address:</strong> [@config:company_poaddr@][%/ if%]
-					<p class="small"><a href="http://www.neto.com.au" title="E-commerce Shopping Cart" target="_blank">E-commerce Software</a> By Neto</p>
+					[%if [@config:show_platform_branding@]%]<p class="small"><a href="http://www.neto.com.au" title="E-commerce Shopping Cart" target="_blank">E-commerce Software</a> By Neto</p>[%/if%]
 				</address>
 			</div>
 		</div>
 	</div>
-</div>
+</footer>
 <!-- Required Neto Scripts - DO NOT REMOVE -->
 [%cdn_asset html:'1' type:'js' library:'jquery' version:'1.11.3'%]jquery.min.js[%/cdn_asset%]
 [%cdn_asset html:'1' type:'js' library:'fancybox' version:'2.1.5'%]jquery.fancybox.pack.js[%/cdn_asset%]

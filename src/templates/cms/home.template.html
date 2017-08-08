@@ -31,7 +31,7 @@
 		[%/advert%]
 	[%/if%]
 	<hr>
-	<div id="homepage-content" class="n-responsive-content">[@page_content@]</div>
+	<section id="homepage-content" class="n-responsive-content" aria-label="Main Description">[@page_content@]</section>
 	[%if [@config:show_home_ads@]%]
 		[%advert type:'product' limit:'8' template:'' ad_group:''%]
 			[%param *header%]
