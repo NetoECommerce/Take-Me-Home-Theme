@@ -1,6 +1,8 @@
+[![Build status](https://badge.buildkite.com/08d877adb02db96a893c76bab52a6667a7173ca5a3a01bd841.svg)](https://buildkite.com/neto-ecommerce/take-me-home-theme)
+
 # Take Me Home Theme
 
-Take Me Home is one of Neto's free themes! 
+Take Me Home is one of Neto's free themes!
 
 ![](https://design.neto.com.au/assets/themerepos5/takemehome.jpg)
 
