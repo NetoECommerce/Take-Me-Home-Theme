@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ie
+
 # Folder where everything will be compiled to
 DIST="./dist"
 
@@ -42,7 +44,6 @@ for theme in $THEMES; do
 
 	# Copy Assets
 	cp -r "./src/css" "${DIST}/${theme}/_assets"
-	cp -r "./src/img" "${DIST}/${theme}/_assets"
 
 	# Rename theme stylesheet to style.css
 	mv "${DIST}/${theme}/_assets/css/${theme}-style.css" "${DIST}/${theme}/_assets/css/style.css"
@@ -51,7 +52,7 @@ for theme in $THEMES; do
 	mv "${DIST}/${theme}/${theme}-netothemeinfo.txt" "${DIST}/${theme}/netothemeinfo.txt"
 done;
 
-cd ./dist
+cd ${DIST}
 # Archive each folder
 for themeFolder in ./*; do
 	zip -rq "${themeFolder%/}.zip" "$themeFolder"
