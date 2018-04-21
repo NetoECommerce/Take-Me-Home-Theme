@@ -1,6 +1,6 @@
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1096,7 +1096,6 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -1122,7 +1121,7 @@ img {
   padding: 4px;
   line-height: 1.42857143;
   background-color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid #ddd;
   border-radius: 0px;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -2525,7 +2524,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3016,7 +3014,6 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -4987,7 +4984,7 @@ a.badge:focus {
   margin-bottom: 20px;
   line-height: 1.42857143;
   background-color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid #ddd;
   border-radius: 0px;
   -webkit-transition: border 0.2s ease-in-out;
   -o-transition: border 0.2s ease-in-out;
@@ -6747,19 +6744,16 @@ button.close {
   max-width: 100%;
   margin-top: 10px;
 }
+.header-search,
+#header-cart {
+  margin-top: 20px;
+}
 #header-cart {
   z-index: 10002;
 }
 .search_loading_icon {
   position: absolute;
   display: none !important;
-}
-.topbar--wrap--form .btn-default {
-  background-color: #fff;
-  border: 1px solid #ccc;
-}
-.topbar--wrap--form .btn-default:hover {
-  border: 1px solid #ccc;
 }
 #neto-dropdown {
   width: 250px;
@@ -6938,8 +6932,7 @@ a.wishlist_toggle:hover {
   font-size: 15px;
 }
 .caption .price {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
   height: 21px;
 }
 .caption .savings {
@@ -7039,7 +7032,7 @@ a.wishlist_toggle:hover {
 }
 .productpricetext {
   font-size: 30px;
-  font-weight: 400;
+  font-weight: bold;
 }
 .productrrp {
   text-decoration: line-through;
@@ -7130,9 +7123,6 @@ a.wishlist_toggle:hover {
   margin-left: 10px;
   margin-bottom: 10px;
   display: block;
-}
-.variation-name {
-  width: 60px;
 }
 .buttontable a {
   font-size: 12px;
@@ -7366,6 +7356,9 @@ ul.imagelist li .imagethumb {
 .margin-right {
   margin-right: 15px;
 }
+.n-responsive-content img {
+  max-width: 100% !important;
+}
 .ir {
   display: block;
   border: 0;
@@ -7593,8 +7586,8 @@ ul.imagelist li .imagethumb {
   font-size: 15px;
   line-height: 1.4;
   height: 4em;
-  font-weight: 500;
   overflow: hidden;
+  font-weight: 500;
 }
 .navigation-list li {
   width: 24%;
@@ -7686,19 +7679,20 @@ ul.imagelist li .imagethumb {
   background-position: 0px -226px;
 }
 .payment-icon-zipmoney {
-	margin-top: 2px;
-	height: 30px;
-	background-position: 0px 30px;
+  margin-top: 2px;
+  height: 30px;
+  background-position: 0px 30px;
 }
 .payment-icon-zippay {
-	margin-top: 7px;
-	height: 18px;
-	background-position: 0px 49px;
+  margin-top: 7px;
+  height: 18px;
+  background-position: 0px 49px;
 }
 .savings-container {
   position: absolute;
   top: 0;
   right: 0;
+  text-align: right;
 }
 .list-group > li + .filter > a:before {
   content: '\F096\0020';
@@ -7739,12 +7733,6 @@ ul.imagelist li .imagethumb {
 }
 .productdetails {
   margin-top: 20px;
-}
-.productdetails p:first-child {
-  margin-bottom: 20px;
-  font-size: 21px;
-  font-weight: 200;
-  line-height: 30px;
 }
 #n_product h1 {
   margin-top: 0;
@@ -8053,7 +8041,7 @@ h4 {
   .dropdown-hover:hover > .dropdown-menu {
     display: block;
   }
-  .wrapper-header > .container > .row:first-child {
+  .wrapper-header > .row:first-child {
     display: flex;
     align-items: center;
   }
@@ -8096,6 +8084,12 @@ h4 {
 }
 .label-block {
   display: block;
+}
+.account-order-card {
+  min-height: 85px;
+}
+.disable-interactivity {
+  pointer-events: none;
 }
 .paypal_button {
   background: #E9E9E9;
@@ -8232,8 +8226,25 @@ input[readonly] {
 .btn .fa {
   pointer-events: none;
 }
+.nactivity {
+  display: none;
+}
+.account-summary h2 {
+  font-size: 24px;
+}
+.account-summary h3 {
+  font-size: 18px;
+  font-weight: normal;
+}
+p.h3 {
+  margin-top: 0;
+}
+.header-search,
+#header-cart {
+  margin-top: 0;
+}
 body {
-  font-family: "Raleway", Helvetica, Arial, sans-serif /*{body-font-family}*/;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
 }
 h1,
 h2,
@@ -8255,16 +8266,16 @@ a:hover {
   background-color: #fff;
 }
 .panel-body {
-  padding: 15px 0 15px;
+  padding: 15px 0;
 }
 .list-group-item {
   padding: 10px 0;
   border: none;
 }
-a.list-group-item:hover,
-button.list-group-item:hover,
 a.list-group-item:focus,
-button.list-group-item:focus {
+a.list-group-item:hover,
+button.list-group-item:focus,
+button.list-group-item:hover {
   color: #B3000E;
   background-color: #fff;
 }
@@ -8273,13 +8284,22 @@ button.list-group-item:focus {
   background: rgba(0, 0, 0, 0);
 }
 .caption .price {
+  font-size: 18px;
+  font-weight: bold;
   font-weight: 400;
 }
 .page-header {
   border: none;
 }
 .panel-body {
-  padding: 15px 0 15px;
+  padding: 15px 0;
+}
+.topbar--wrap--form .btn-default {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.topbar--wrap--form .btn-default:hover {
+  border: 1px solid #ccc;
 }
 .topbar--Wrap {
   height: 44px;
@@ -8352,23 +8372,23 @@ button.list-group-item:focus {
     font-size: 12px;
   }
 }
-.nav > li > a:hover,
-.nav > li > a:focus {
+.nav > li > a:focus,
+.nav > li > a:hover {
   background-color: #FFF;
 }
 .wrapper-footer {
-  padding: 40px 0px;
+  padding: 40px 0;
 }
 @media (max-width: 767px) {
-  .wrapper-footer h4 {
+  .wrapper-footer {
     margin-top: 20px;
   }
 }
 .sort_container {
   margin-bottom: 40px;
 }
-#left-sidebar .list-group h4,
-#left-sidebar .list-group .h4 {
+#left-sidebar .list-group .h4,
+#left-sidebar .list-group h4 {
   margin-top: 6px;
   font-size: 14px;
   color: #585858;
@@ -8381,20 +8401,4 @@ button.list-group-item:focus {
   .wrapper-thumbnail {
     float: left;
   }
-}
-.nactivity{
-	display: none;
-}
-.n-responsive-content img {
-	max-width: 100% !important;
-}
-.account-summary h2 {
-  font-size: 24px;
-}
-.account-summary h3 {
-  font-size: 18px;
-  font-weight: normal;
-}
-p.h3{
-	margin-top: 0;
 }
