@@ -1,4 +1,4 @@
-
+@import url('//fonts.googleapis.com/css?family=Raleway:400,300');
 body {
 	font-family: "Raleway", Helvetica, Arial, sans-serif;
 	background-color: #fff /*{body|background-color}*/;
@@ -12,44 +12,28 @@ a:hover, a:active {
 	color: #B3000E /*{body|link-colour-hover}*/
 }
 /* Header */
-.topbar--Wrap--container {
+.topbar-container {
 	background-color: #eee /*{header|topbar-background-colour}*/;
 }
-.topbar--Wrap .topbar--wrap--nav > li > a {
+.topbar .topbar-nav > li > a {
 	color: #000 /*{header|topbar-link-colour}*/;
 }
-.topbar--Wrap .topbar--wrap--nav > li > a:hover,
-.topbar--Wrap .topbar--wrap--nav > li > a:active {
-	color: #B3000E /*{header|topbar-link-colour}*/;
-}
-#header-cart > a {
-	color: #000 /*{header|topbar-link-colour}*/;
-}
-#header-cart > a:hover,
-#header-cart > a:focus {
-	color: #B3000E /*{header|topbar-link-colour}*/;
-	text-decoration: none;
-}
-.checkout-link {
-	color: #B3000E /*{header|topbar-link-colour}*/;
+.topbar .topbar-nav > li > a:hover,
+.topbar .topbar-nav > li > a:active {
+	color: #B3000E /*{header|topbar-link-hover-colour}*/;
 }
 .wrapper-header {
 	background-color: #fff /*{header|background-colour}*/;
-	border:none;
-	margin-bottom:0px;
 }
 .nMobileNav li a, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active{
-	color: #000 /*{header|link-colour}*/;
+	color: #777 /*{header|mobile-nav-link-colour}*/;
 }
 @media (max-width: 767.98px){
 	.wrapper-header .navbar-nav .dropdown-menu{
 		background-color: transparent;
 	}
 	.wrapper-header .dropdown-menu .dropdown-item{
-		color: #000 /*{header|link-colour}*/;
-	}
-	.navbar-nav .dropdown-menu > li > a {
-		color: #000 /*{header|topbar-link-colour}*/;
+		color: #777 /*{header|mobile-nav-link-colour}*/;
 	}
 }
 /* Footer */
