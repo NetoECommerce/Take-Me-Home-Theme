@@ -21,7 +21,7 @@
 						</div>
 					</form>
 				</div>
-				<div class="col-sm-5 col-lg-6">
+				<div class="col-sm-5 col-md-6 col-lg-6">
 					<ul class="topbar-nav nav navbar-nav h-100 align-items-center">
 						[%cache type:'menu' id:'header-content-menu'%]
 							[%menu id:'web_header'%]
@@ -54,11 +54,11 @@
 						[%/ cache%]
 					</ul>
 				</div>
-				<div class="col-sm-4 col-lg-3">
+				<div class="col-sm-4 col-md-3 col-lg-3">
 					<ul class="nav navbar-nav ml-auto float-right h-100 align-items-center" role="navigation">
 						<li class="nav-item dropdown dropdown-hover">
 							<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" id="cartcontentsheader">
-								<i class="fa fa-shopping-cart"></i> <span class="visible-lg visible-inline-lg">Cart</span>(<span rel="a2c_item_count">[%format type:'number' dp:'0'%][%CART id:'total_items'%][%/CART%][%/format%]</span>)
+								<i class="fa fa-shopping-cart"></i> <span class="d-none d-lg-inline">Cart</span>(<span rel="a2c_item_count">[%format type:'number' dp:'0'%][%CART id:'total_items'%][%/CART%][%/format%]</span>)
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu dropdown-menu-right">
