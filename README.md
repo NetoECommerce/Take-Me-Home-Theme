@@ -8,32 +8,37 @@ Take Me Home is one of Neto's free themes!
 
 ## Installation
 
-The safest way to install Take Me Home is through Neto's theme store. Go to **Content** > **Website Themes** in your Neto control panel, hover over _Take Me Home_ and click the green _Install_ button.
+**Theme editor**
 
-To install the latest version of Take Me Home directly from this repository you simply need to upload the `src` directory from this repository into the `httpdocs/assets/themes` directory on your website. You should also rename this new `src` directory to whatever you would like your custom theme to be named.
+The safest way to install Take Me Home is through Neto's theme store. Go to **Webstore** > **Theme editor** in your Neto control panel, hover over _Take Me Home_ and click the green _Install_ button.
 
-For the above, you will need FTP access to your Neto website, which you can request [here](http://docs.neto.com.au/designer-documentati/tips-tricks/how-to-connect-to-neto-via-ftp/).
+**Directly install**
+
+To install the latest version of Take Me Home directly from this repository you simply need to upload the `src` directory from this repository into the `httpdocs/assets/themes` directory on your Neto website. You should also rename this new `src` directory to whatever you would like your custom theme to be named.
+
+For the above, you will need FTP access to your Neto website, which you can request [here](http://forms.neto.com.au/design/requestftp.html).
 
 ## Documentation
 
-Documentation for designers and developers can be found [here](https://www.neto.com.au/designer-documentation/).
+Documentation for designers and developers can be found [here](https://developers.neto.com.au/).
 
-As Take Me Home is built almost entirely upon Bootstrap 3, the [Bootstrap documentation](http://getbootstrap.com) is perhaps the most valuable source of documentation for a web designer who isn't looking to build complex functionality.
+As Take Me Home is built almost entirely upon Bootstrap 4, the [Bootstrap documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/) is perhaps the most valuable source of documentation for a web designer who isn't looking to build complex functionality.
 
-## Compiling .less files
+## Compiling .scss files
 
-If you are not comfortable working with [LESS](http://lesscss.org/), you are best off writing all CSS in your own custom CSS file. As our `.less` files are compiled into `app.css`, avoid modifying `app.css`. Otherwise, if for whatever reason you eventually do need to re-compile the less files, any changes to `app.css` would be lost.
+If you are not comfortable working with [SASS](https://sass-lang.com/), you are best off writing all CSS in your own custom CSS file. As our `.scss` files are compiled into `app.css`, avoid modifying `app.css`. Otherwise, if for whatever reason you eventually do need to re-compile the `.scss` files, any changes to `app.css` would be lost.
 
-If you are comfortable with Less, you're best off developing in you're own less file and adding it to the imports in ``src/css/app.less``, which needs to be compiled to ``src/css/app.css`` using Gulp. See our [Advanced Workflow documentation](https://www.neto.com.au/designer-documentation/developing-a-website-with-neto/advanced-development-workflow/), which helps you start from Take Me Home to build your own theme.
+If you are comfortable with SASS, you're best off developing in you're own `.scss` file and adding it to the imports in `src/scss/app.scss`, which needs to be compiled to `src/css/app.css` using Gulp.
 
-If you are compiling `.less` files for the purpose of contributing to Take Me Home, follow these steps:
+If you are compiling `.scss` files for the purpose of contributing to Take Me Home, follow these steps:
 
 _Note that steps 1 and 2 only need to be completed once per system, so no need to repeat them again._
 
-1. Install [node.js](https://nodejs.org/)
-2. Install Gulp globally with `npm install --global gulp` in your terminal, if you have not already
-3. CD into your local folder for Take Me Home and run the `npm install` command to install all relevant dependencies
-4. Run `gulp`—this will now watch your `.less` files and compile them as they change
+1. Install [node.js](https://nodejs.org/),
+2. CD into your local folder of Take Me Home and run the `npm i` command to install all relevant dependencies,
+3. Run either of these two commands:
+    - `npm run build` — this will compile your `.scss` files.
+    - `npm run watch` — this will watch your `.scss` files and compile them as they change.
 
 ## Testing
 
@@ -45,4 +50,4 @@ The current version of Take Me Home will only work on websites running Neto 6+. 
 
 ## Creators
 
-Take Me Home was created by the design team at [Neto E-commerce Solutions](http://neto.com.au).
+Made w/ 🔥 by [Neto E-commerce Solutions](http://neto.com.au).
