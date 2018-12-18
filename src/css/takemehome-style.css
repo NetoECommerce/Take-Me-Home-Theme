@@ -5,10 +5,10 @@ body {
 	background-image: none /*{body|background-image}*/;
 	color: #333 /*{body|text-colour}*/;
 }
-a{
+a, .btn-link{
 	color: #000 /*{body|link-colour}*/
 }
-a:hover, a:active {
+a:hover, a:active, .btn-link:hover{
 	color: #B3000E /*{body|link-colour-hover}*/
 }
 /* Header */
