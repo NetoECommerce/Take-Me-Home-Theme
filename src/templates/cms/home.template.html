@@ -31,14 +31,16 @@
 			[%/param%]
 		[%/advert%]
 	[%/if%]
-	<hr aria-hidden="true" />
-	<section id="homepage-content" class="n-responsive-content" aria-label="Main description">[@page_content@]</section>
+
+	[%if [@page_content@]%]
+		<section id="homepage-content" class="n-responsive-content mt-5" aria-label="Main description">[@page_content@]</section>
+	[%/if%]
+	
 	[%if [@config:show_home_ads@]%]
 		[%advert type:'product' limit:'8' template:'' ad_group:''%]
 			[%param *header%]
-				<hr aria-hidden="true"/>
 				<h2 class="sr-only">Featured products</h2>
-				<section class="row products-row" aria-label="Featured products">
+				<section class="row products-row mt-5" aria-label="Featured products">
 			[%/param%]
 			[%param footer%]
 				</section>
@@ -46,9 +48,8 @@
 			[%param *ifempty%]
 				[%random_products filter_category:'' template:'' limit:'8'%]
 					[%param *header%]
-						<hr aria-hidden="true"/>
 						<h2 class="sr-only">Featured products</h2>
-						<section class="row products-row" aria-label="Featured products">
+						<section class="row products-row mt-5" aria-label="Featured products">
 					[%/param%]
 					[%param *footer%]
 						</section>

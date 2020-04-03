@@ -14,7 +14,7 @@
 					<form class="topbar-form" name="productsearch" method="get" action="/">
 						<input type="hidden" name="rf" value="kw"/>
 						<div class="input-group">
-							<input class="form-control ajax_search" value="[%nohtml%][%filter ID:'keywords'%][%/filter%][%/nohtml%]" id="name_search" autocomplete="off" name="kw" type="text"/>
+							<input class="form-control ajax_search" value="[%nohtml%][%filter ID:'keywords'%][%/filter%][%/nohtml%]" id="name_search" autocomplete="off" name="kw" type="text" placeholder="Search..."/>
 							<span class="input-group-append">
 								<button type="submit" value="Search" class="btn btn-default"><i class="fa fa-search"></i></button>
 							</span>
@@ -68,9 +68,6 @@
 								</li>
 							</ul>
 						</li>
-						<li class="nav-item">
-							<a href="[%url page:'checkout' type:'payment'/%]" class="nav-link">Checkout</a>
-						</li>
 					</ul>
 				</div>
 			</div>
@@ -79,7 +76,7 @@
 </div>
 <div class="wrapper-header">
 	<div class="container">
-		<div class="row">
+		<div class="row align-items-center">
 			<div class="col-12 col-md-4 wrapper-logo text-center text-sm-left">
 				<a href="[@config:homeurl@]" title="[@config:company_name@]">
 					<img class="logo" src="[@config:imageurl@]/website_logo.png" alt="[@config:company_name@]"/>
@@ -119,7 +116,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row d-md-none">
 			<div class="col-12">
 				<div class="navbar navbar-default">
 					<ul class="nMobileNav">
