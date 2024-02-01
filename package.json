@@ -20,7 +20,7 @@
 	},
 	"homepage": "https://github.com/NetoECommerce/Take-Me-Home-Theme",
 	"devDependencies": {
-		"Skeletal": "git://github.com/NetoECommerce/Skeletal.git",
+		"Skeletal": "git+https://github.com/NetoECommerce/Skeletal.git",
 		"gulp": "^4.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-postcss": "^8.0.0",
